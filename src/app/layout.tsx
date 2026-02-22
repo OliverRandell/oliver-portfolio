@@ -1,26 +1,36 @@
 import type { Metadata } from "next";
+import { Source_Code_Pro, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { SiteHeader } from "./components/site-header";
-import { SiteFooter } from "./components/site-footer";
+import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
+
+const sourceCodePro = Source_Code_Pro({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-body",
+  weight: ["400", "500", "600"],
+});
 
 export const metadata: Metadata = {
-  title: "Oliver Randell — Senior Product Manager",
-  description:
-    "Senior Product Manager focused on onboarding & growth for startups and product-led SaaS.",
+  title: "Oliver Randell",
+  description: "Senior Product Manager focused on onboarding & growth.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className="min-h-dvh bg-white text-black antialiased">
+    <html lang="en" className={`${sourceCodePro.variable} ${spaceGrotesk.variable}`}>
+      <body className="bg-white text-neutral-900 antialiased">
         <SiteHeader />
-        <main className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-          {children}
-        </main>
+          <main className="min-h-[calc(100vh-64px)]">{children}</main>
         <SiteFooter />
       </body>
     </html>

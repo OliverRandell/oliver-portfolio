@@ -1,7 +1,9 @@
-export default function ExperiencePage() {
-  return (
+import Container from "@/components/container";
+
+export default function Page() {
+  return <Container className="py-12">
     <div className="space-y-6">
-      <div className="text-xs font-medium tracking-[0.16em] text-black/50">
+      <div className="text-xs font-medium tracking-[0.16em] text-neutral-500">
         EXPERIENCE
       </div>
       <h1 className="text-4xl font-medium tracking-tight">Experience</h1>
@@ -10,5 +12,6 @@ export default function ExperiencePage() {
         your Webflow version.
       </p>
     </div>
-  );
+  </Container>;
 }
+
