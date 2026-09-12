@@ -11,9 +11,8 @@ export default function Hero() {
           </p>
 
           <h1 className="max-w-3xl font-serif text-5xl font-medium leading-[0.98] tracking-[-0.035em] text-ink sm:text-6xl lg:text-[4.75rem]">
-            Helping organisations turn{" "}
-            <span className="text-accent">complex problems</span> into products
-            people actually use.
+            I help organisations turn {" "}
+            <span className="text-accent">complex problems</span> into  digital products
           </h1>
 
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">

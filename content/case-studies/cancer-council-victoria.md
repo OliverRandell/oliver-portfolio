@@ -5,6 +5,9 @@ client: "Cancer Council Victoria"
 year: "2025"
 date: "2025-12-31"
 featured: true
+websiteUrl: "https://www.quit.org.au/"
+coverImage: "/images/case-studies/ccv/ccv-cover.png"
+coverAlt: "The Quit website shown across desktop and mobile devices"
 
 role: "Delivery Lead / Product Lead"
 duration: "July–December 2025"
@@ -39,7 +42,7 @@ metrics:
     label: "Users in a recent 30-day period"
 ---
 
-Cancer Council Victoria was replacing the digital foundation behind Quit while establishing the basis for a national cessation platform: a more accessible and flexible way for Australians to find evidence-based support to stop smoking or vaping.
+Cancer Council Victoria was replacing the digital foundation behind [Quit](https://www.quit.org.au/) while establishing the basis for a national cessation platform: a more accessible and flexible way for Australians to find evidence-based support to stop smoking or vaping.
 
 My role was to lead delivery from solution design through launch, creating enough clarity for the client, designers and engineers to keep making good decisions as the plan changed around us.
 
@@ -104,6 +107,16 @@ It kept content migration moving, protected time for QA and launch, and avoided 
 The foundational National Cessation Platform launched in December 2025 against the contractual delivery commitment.
 
 Phase 1 established a new platform foundation spanning structured content and reusable components, search, analytics, personalisation foundations and interactive cessation tools including the Quit Plan, Cost Calculator and Health Effects experience.
+
+[![The My Quit Plan experience, showing the first step for choosing a quit date](/images/case-studies/ccv/quit-plan.webp)](https://www.quit.org.au/en/tools/quit-plan)
+
+*My Quit Plan turns a difficult personal goal into a clear, guided series of steps.*
+
+The platform brought practical services including [My Quit Plan](https://www.quit.org.au/en/tools/quit-plan), the [Cost Calculator](https://www.quit.org.au/en/tools/cost-calculator) and the interactive [Health Effects experience](https://www.quit.org.au/en/tools/health-effects) into a consistent, accessible product ecosystem.
+
+[![The interactive Health Effects experience, showing how smoking affects the brain](/images/case-studies/ccv/health-effects.webp)](https://www.quit.org.au/en/tools/health-effects)
+
+*The Health Effects experience makes a complex evidence base easier to explore by product and area of the body.*
 
 The work then moved into structured handover and managed support rather than an extended build phase. The selected article-to-page migration was completed after launch, validating the decision to keep content moving rather than pause for a larger template rebuild.
 
