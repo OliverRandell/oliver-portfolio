@@ -6,11 +6,13 @@ year: "2025"
 date: "2025-03-01"
 featured: false
 
+role: "Founder / Product Lead"
+
 summary: >
-  Designed, built and launched Candella, a mobile-first platform connecting
-  users with local sustainable businesses across Victoria. Delivered an MVP
-  across iOS, Android and Web using no-code tools, securing 30+ brand
-  partnerships and validating real demand.
+  Founded, designed and launched Candella, a mobile-first platform connecting
+  people with local sustainable businesses across Victoria. Built the MVP for
+  iOS, Android and Web using no-code tools, listing more than 150 businesses
+  and securing over 30 brand partnerships.
 
 skills:
   - Product Strategy
@@ -25,44 +27,71 @@ tools:
   - Notion
   - Canva
   - Instagram
+
+metrics:
+  - value: "150+"
+    label: "Sustainable businesses listed"
+  - value: "30+"
+    label: "Brand partnerships"
+  - value: "3"
+    label: "Platforms launched"
 ---
+
+Sustainable living is often made to feel complicated, confusing or out of reach. When people want to make a better choice, they are frequently met with greenwashing, fragmented information and brands that are difficult to verify.
+
+I saw an opportunity to make that experience more positive. Candella would help people discover local businesses doing genuinely useful work, and give those businesses a clearer way to reach customers who cared about sustainability.
+
+I founded Candella and led it from an early idea through research, brand development, product design and launch across iOS, Android and Web.
 
 ## My role
 
-- Defined product vision, brand identity and tone of voice
-- Led UX design, UI development and platform build in Adalo
+- Defined the product vision, brand identity and tone of voice
+- Led UX design, UI design and the platform build in Adalo
 - Managed App Store and Google Play submissions
-- Built early user research and roadmap prioritisation processes
-- Recruited interns and a co-founder to lead marketing and partnerships
+- Established early user research and roadmap prioritisation
+- Recruited interns and brought in a co-founder to lead marketing and partnerships
 
 ## The challenge
 
-The climate crisis often feels overwhelming — a tangle of systemic issues far beyond individual control. Like many others, I was frustrated by the constant bad news, the slow pace of government action and the feeling that living sustainably was only accessible to the privileged.
+The climate crisis can feel like a problem too large for any individual to influence. Like many people, I was frustrated by the constant bad news, the pace of government action and the feeling that sustainable living was only accessible to people with more time or money.
 
-I wanted to find better ways to shop, but I didn't know where to start. I realised there was a gap: everyday people wanted to make better choices, but the path forward was hidden behind complexity, greenwashing and inertia.
+I wanted to find better places to shop, but I did not know where to start.
 
-The idea for Candella was born from a simple insight: when I first moved to Melbourne, I discovered that shopping at local markets wasn't just better for the planet — it was cheaper, more joyful and radically less wasteful. Why wasn't this experience easier for more people to access?
+When I first moved to Melbourne, I found that shopping at local markets was often cheaper, more enjoyable and far less wasteful. The businesses were there, but discovering them required effort and trust. There was no simple way to understand why one option was genuinely better than another.
 
-Candella set out to bridge that gap, connecting users with truly sustainable businesses without the guilt, overwhelm or endless browser searches.
+Candella began with a straightforward question:
+
+> **Could we make sustainable choices easier to discover and more rewarding to act on?**
+
+As a self-funded product, the practical challenge was deciding how much to build before we had evidence that people would use it. I needed to create something credible enough to test the idea without spending months building the perfect version.
 
 ## The approach
 
-I started with quick market research, surveying behaviours and needs across the conscious consumer space, then developed a lean product strategy focused on building momentum as quickly as possible. I created the Candella brand identity, mission and tone of voice, aligning everything around accessibility, optimism and authenticity.
+I began with market research, user conversations and a review of the conscious consumer space. The goal was to understand how people currently found sustainable businesses, what stopped them taking action and what would make the experience feel useful rather than judgemental.
 
-As the sole product designer and builder, I led the UX and UI design of the first Candella platform. To expedite time to market, I built the MVP using Adalo, a no-code tool that allowed me to launch simultaneously across iOS, Android and Web with geolocation capabilities. While I initially dreamed of a more sophisticated app, I made a conscious product decision: proof of concept and real-world user feedback mattered more than perfect features.
+That research shaped Candella's identity. The product needed to feel optimistic, accessible and practical. It would celebrate better choices rather than make people feel guilty for imperfect ones.
 
-As we grew, I brought in a co-founder with complementary skills in business development and sustainability verification, and recruited social media interns and partners to build grassroots awareness.
+I designed the first end-to-end experience and built the MVP in Adalo. Choosing a no-code platform was a deliberate product decision. It gave me geolocation and a single build for iOS, Android and Web, allowing us to reach users and learn more quickly.
+
+There were trade-offs. The first version of category filtering was less flexible than I wanted, and some ideas had to wait. I accepted those constraints because launching a useful product and gathering real feedback mattered more than polishing features that had not yet been validated.
+
+As the proposition developed, I brought in a co-founder with complementary experience in business development and sustainability verification. We worked with local brands and social media interns to build the directory, test our message and create early awareness.
 
 ## The outcome
 
-- Launched Candella MVP across iOS, Android and Web using no-code tools.
-- 150+ sustainable businesses listed across Victoria.
-- Positive feedback from early adopters praising accessibility and mission clarity.
-- Secured 30+ brand partnerships, including notable names like Zero Co.
-- Validated the need for a coalition loyalty program based on user feedback.
+- Launched the Candella MVP across iOS, Android and Web
+- Listed more than 150 sustainable businesses across Victoria
+- Secured more than 30 brand partnerships, including Zero Co
+- Received positive early feedback on the product's accessibility and clarity of purpose
+- Validated interest in a coalition loyalty program
+- Learned that users wanted more transparency about why a business qualified as sustainable, which shaped the next stage of the content and verification strategy
 
-## Upon reflection
+## What I learned
 
-Building Candella taught me the art of launching lean without compromising heart. It reminded me that successful product work isn't about building every feature upfront — it's about starting conversations, validating real needs and empowering users to join a bigger movement.
+Candella taught me how to launch lean without stripping the personality out of a product.
 
-It also reinforced the power of collaboration: bringing on partners who believed in the mission allowed us to grow faster and think bigger.
+The constraint of building with no-code tools forced useful decisions. I had to separate what was essential to the proposition from what was simply attractive to build. That meant accepting some imperfect interactions in return for getting the product into people's hands.
+
+It also reinforced the value of bringing in people with strengths different from my own. The product became more credible when product design, sustainability knowledge, partnerships and community-building worked together.
+
+Most importantly, the project showed me that early validation is not only about whether people like an idea. The questions and doubts they raise, particularly around trust and transparency, often reveal the more important product problem underneath it.
