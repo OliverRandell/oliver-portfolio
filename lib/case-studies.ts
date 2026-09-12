@@ -24,6 +24,8 @@ export type CaseStudy = {
   skills: string[];
   tools: string[];
   websiteUrl?: string;
+  coverImage?: string;
+  coverAlt?: string;
   metrics: CaseStudyMetric[];
   /** Markdown body after the frontmatter. */
   content: string;
@@ -86,6 +88,8 @@ function readCaseStudy(fileName: string): CaseStudy {
     skills: stringArray(data.skills),
     tools: stringArray(data.tools),
     websiteUrl: optionalString(data.websiteUrl),
+    coverImage: optionalString(data.coverImage),
+    coverAlt: optionalString(data.coverAlt),
     metrics: metricsArray(data.metrics),
     content: content.trim(),
   };

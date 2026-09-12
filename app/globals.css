@@ -2,20 +2,24 @@
 
 @theme {
   /* Typography */
-  --font-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  /* Palette — warm, editorial, restrained */
-  --color-paper: #faf8f3;
-  --color-surface: #f2eee4;
-  --color-ink: #1f1d1a;
-  --color-ink-muted: #5a564e;
-  --color-ink-faint: #9c9789;
-  --color-border: #e2ddd1;
-  --color-border-strong: #d8d2c4;
-  --color-accent: #6b3460;
-  --color-accent-dark: #4a2244;
-  --color-accent-tint: #f3eaf1;
+  /* Palette, clean white with confident product-led colour */
+  --color-paper: #ffffff;
+  --color-surface: #f5f7fa;
+  --color-surface-strong: #edf1f5;
+  --color-ink: #0d1b2a;
+  --color-ink-muted: #51606f;
+  --color-ink-faint: #7d8995;
+  --color-border: #dfe5eb;
+  --color-border-strong: #c8d1da;
+  --color-accent: #3567f6;
+  --color-accent-dark: #1f46c8;
+  --color-accent-tint: #eaf0ff;
+  --color-coral: #f06b59;
+  --color-mint: #bde8db;
+  --color-sun: #f2ce62;
 
   /* Layout */
   --container-content: 72rem;
@@ -33,6 +37,7 @@
   body {
     background-color: var(--color-paper);
     color: var(--color-ink);
+    padding-top: 4.75rem;
   }
 
   ::selection {

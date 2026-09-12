@@ -7,7 +7,7 @@ export default function FeaturedCaseStudies() {
   const featured = getFeaturedCaseStudies();
 
   return (
-    <section className="border-b border-border bg-surface">
+    <section className="border-b border-border bg-paper">
       <div className="mx-auto max-w-(--container-content) px-6 py-20 sm:px-8 sm:py-28 lg:px-12">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
@@ -37,7 +37,11 @@ export default function FeaturedCaseStudies() {
 
         <div className="mt-12 grid gap-6 sm:mt-14 md:grid-cols-2">
           {featured.map((caseStudy) => (
-            <CaseStudyCard key={caseStudy.slug} caseStudy={caseStudy} />
+            <CaseStudyCard
+              key={caseStudy.slug}
+              caseStudy={caseStudy}
+              variant="featured"
+            />
           ))}
         </div>
       </div>
