@@ -1,75 +1,63 @@
 import Image from "next/image";
 import Button from "./ui/Button";
-import SkillPill from "./ui/SkillPill";
-
-const skills = [
-  "Product strategy",
-  "Discovery & facilitation",
-  "UX & interaction design",
-  "Stakeholder alignment",
-  "Engineering fluency",
-];
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-border">
-      <div className="mx-auto grid max-w-(--container-content) gap-12 px-6 py-20 sm:px-8 sm:py-28 md:grid-cols-[1.1fr_0.9fr] md:items-center md:gap-16 lg:px-12">
-        {/* Left — copy */}
+    <section className="relative overflow-hidden border-b border-border bg-paper">
+      <div className="mx-auto grid min-h-[calc(100svh-4.75rem)] max-w-(--container-content) gap-12 px-6 py-16 sm:px-8 sm:py-20 md:grid-cols-[1.08fr_0.92fr] md:items-center md:gap-16 lg:px-12">
         <div className="order-2 md:order-1">
-          <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-accent">
-            Hello! I&apos;m Oliver
+          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            Oliver Randell · Senior Product Manager
           </p>
 
-          <h1 className="font-serif text-4xl font-medium leading-[1.15] text-ink sm:text-5xl lg:text-[3.25rem]">
-            Product Manager helping organisations turn complex problems into
-            products people actually use.
+          <h1 className="max-w-3xl font-serif text-5xl font-medium leading-[0.98] tracking-[-0.035em] text-ink sm:text-6xl lg:text-[4.75rem]">
+            Helping organisations turn{" "}
+            <span className="text-accent">complex problems</span> into products
+            people actually use.
           </h1>
 
-          <div className="mt-7 max-w-xl space-y-4 text-[15px] leading-relaxed text-ink-muted sm:text-base">
-            <p>
-              I spent the first part of my career as a motorsport engineer,
-              where decisions are tested against lap times, not opinions.
-              That same discipline carried over when I moved into digital
-              product — fifteen years now spent moving between frontend
-              development, UX and product leadership.
-            </p>
-            <p>
-              Most recently I led the end-to-end rebuild of a SaaS platform
-              used by Toyota, Volkswagen and Quest Hotels, and I now lead
-              delivery on complex, multi-stakeholder products spanning health,
-              aged care and automotive. I&apos;m at my best translating a
-              messy business problem into something a team can build — and a
-              person can actually use.
-            </p>
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
+            I combine product strategy, UX and engineering fluency to create
+            clarity, align teams and move ambitious digital products from
+            uncertainty to launch.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Button href="/case-studies">View selected work</Button>
+            <Button href="/about" variant="outline">
+              More about me
+            </Button>
           </div>
 
-          <div className="mt-9">
-            <Button href="/case-studies">View my work</Button>
-          </div>
-
-          <div className="mt-10 flex flex-wrap gap-2.5">
-            {skills.map((skill) => (
-              <SkillPill key={skill}>{skill}</SkillPill>
-            ))}
+          <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-5 text-xs font-medium uppercase tracking-[0.08em] text-ink-faint">
+            <span>Product strategy</span>
+            <span>Delivery leadership</span>
+            <span>UX and discovery</span>
           </div>
         </div>
 
-        {/* Right — portrait */}
         <div className="order-1 md:order-2">
-          <div className="relative mx-auto max-w-[22rem] md:max-w-none">
+          <div className="relative mx-auto max-w-[25rem] py-8 md:max-w-none md:py-16">
             <div
               aria-hidden="true"
-              className="absolute -right-3 -top-3 bottom-3 left-3 -z-10 rounded-sm bg-accent-tint sm:-right-4 sm:-top-4 sm:bottom-4 sm:left-4"
+              className="absolute inset-y-0 left-[14%] right-[-35vw] -z-10 rounded-l-[5rem] bg-surface sm:rounded-l-[8rem]"
             />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-border">
+            <div
+              aria-hidden="true"
+              className="absolute -left-3 top-[16%] h-20 w-20 rounded-full bg-sun sm:h-28 sm:w-28"
+            />
+            <div className="relative mx-auto aspect-square w-[88%] overflow-hidden rounded-full border-[10px] border-paper shadow-[0_20px_65px_rgba(13,27,42,0.14)]">
               <Image
                 src="/images/oliver-portrait.jpg"
                 alt="Portrait of Oliver Randell"
                 fill
                 priority
-                sizes="(min-width: 768px) 36rem, 90vw"
-                className="object-cover grayscale-[8%]"
+                sizes="(min-width: 768px) 32rem, 80vw"
+                className="object-cover object-top"
               />
+            </div>
+            <div className="absolute bottom-[8%] right-[2%] rounded-full bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-paper shadow-lg">
+              Melbourne, Australia
             </div>
           </div>
         </div>

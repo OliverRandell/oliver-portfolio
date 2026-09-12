@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Manrope, Newsreader } from "next/font/google";
 import Header from "@/components/Header";
+import ContactRail from "@/components/ContactRail";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const newsreader = Newsreader({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-  variable: "--font-cormorant",
+  variable: "--font-newsreader",
   display: "swap",
 });
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-  variable: "--font-inter",
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -55,9 +56,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="en" className={`${newsreader.variable} ${manrope.variable}`}>
       <body className="bg-paper font-sans text-ink antialiased">
         <Header />
+        <ContactRail />
         {children}
       </body>
     </html>
