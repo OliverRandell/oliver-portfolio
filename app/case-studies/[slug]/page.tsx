@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 import Button from "@/components/ui/Button";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import {
-  caseStudies,
   getCaseStudyBySlug,
   getAllCaseStudiesSorted,
+  getCaseStudySlugs,
 } from "@/lib/case-studies";
 
 export function generateStaticParams() {
-  return caseStudies.map((cs) => ({ slug: cs.slug }));
+  return getCaseStudySlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -23,20 +24,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const caseStudy = getCaseStudyBySlug(slug);
   if (!caseStudy) return {};
+
   return {
     title: caseStudy.title,
     description: caseStudy.summary,
   };
-}
-
-function Prose({ paragraphs }: { paragraphs: string[] }) {
-  return (
-    <div className="space-y-4 text-[15px] leading-relaxed text-ink-muted">
-      {paragraphs.map((p, i) => (
-        <p key={i}>{p}</p>
-      ))}
-    </div>
-  );
 }
 
 export default async function CaseStudyPage({
@@ -49,11 +41,8 @@ export default async function CaseStudyPage({
   if (!caseStudy) notFound();
 
   const related = getAllCaseStudiesSorted()
-    .filter((cs) => cs.slug !== caseStudy.slug)
+    .filter((study) => study.slug !== caseStudy.slug)
     .slice(0, 2);
-
-  const hasFullWriteUp =
-    caseStudy.challenge || caseStudy.approach || caseStudy.outcome;
 
   return (
     <main>
@@ -72,80 +61,89 @@ export default async function CaseStudyPage({
           <h1 className="mt-3 max-w-3xl font-serif text-4xl font-medium leading-tight text-ink sm:text-5xl">
             {caseStudy.title}
           </h1>
+          <p className="mt-6 max-w-3xl text-[15px] leading-relaxed text-ink-muted sm:text-base">
+            {caseStudy.summary}
+          </p>
+
+          {caseStudy.metrics.length > 0 && (
+            <dl className="mt-10 grid border-y border-border sm:grid-cols-3">
+              {caseStudy.metrics.map((metric, index) => (
+                <div
+                  key={`${metric.value}-${metric.label}`}
+                  className={`py-5 ${
+                    index > 0
+                      ? "border-t border-border sm:border-l sm:border-t-0 sm:pl-6"
+                      : ""
+                  }`}
+                >
+                  <dt className="font-serif text-2xl font-medium text-ink">
+                    {metric.value}
+                  </dt>
+                  <dd className="mt-1 text-xs uppercase tracking-[0.08em] text-ink-faint">
+                    {metric.label}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          )}
 
           <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_20rem]">
-            <div className="space-y-10 lg:order-1">
-              <Prose paragraphs={[caseStudy.summary]} />
-
-              {caseStudy.role && (
-                <div>
-                  <h2 className="font-serif text-2xl font-medium text-ink">
-                    My role
-                  </h2>
-                  <ul className="mt-4 space-y-2 text-[15px] leading-relaxed text-ink-muted">
-                    {caseStudy.role.map((item, i) => (
-                      <li key={i} className="flex gap-3">
-                        <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-accent" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {caseStudy.challenge && (
-                <div>
-                  <h2 className="font-serif text-2xl font-medium text-ink">
-                    The challenge
-                  </h2>
-                  <div className="mt-4">
-                    <Prose paragraphs={caseStudy.challenge} />
-                  </div>
-                </div>
-              )}
-
-              {caseStudy.approach && (
-                <div>
-                  <h2 className="font-serif text-2xl font-medium text-ink">
-                    The approach
-                  </h2>
-                  <div className="mt-4">
-                    <Prose paragraphs={caseStudy.approach} />
-                  </div>
-                </div>
-              )}
-
-              {caseStudy.outcome && (
-                <div>
-                  <h2 className="font-serif text-2xl font-medium text-ink">
-                    The outcome
-                  </h2>
-                  <ul className="mt-4 space-y-2 text-[15px] leading-relaxed text-ink-muted">
-                    {caseStudy.outcome.map((item, i) => (
-                      <li key={i} className="flex gap-3">
-                        <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-accent" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {caseStudy.reflection && (
-                <div>
-                  <h2 className="font-serif text-2xl font-medium text-ink">
-                    Upon reflection
-                  </h2>
-                  <div className="mt-4">
-                    <Prose paragraphs={caseStudy.reflection} />
-                  </div>
-                </div>
-              )}
-
-              {!hasFullWriteUp && (
+            <div className="lg:order-1">
+              {caseStudy.content ? (
+                <article className="[&>:first-child]:mt-0">
+                  <ReactMarkdown
+                    components={{
+                      h2: ({ children }) => (
+                        <h2 className="mt-10 font-serif text-2xl font-medium text-ink">
+                          {children}
+                        </h2>
+                      ),
+                      h3: ({ children }) => (
+                        <h3 className="mt-8 font-serif text-xl font-medium text-ink">
+                          {children}
+                        </h3>
+                      ),
+                      p: ({ children }) => (
+                        <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
+                          {children}
+                        </p>
+                      ),
+                      ul: ({ children }) => (
+                        <ul className="mt-4 list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-ink-muted marker:text-accent">
+                          {children}
+                        </ul>
+                      ),
+                      ol: ({ children }) => (
+                        <ol className="mt-4 list-decimal space-y-2 pl-5 text-[15px] leading-relaxed text-ink-muted marker:text-accent">
+                          {children}
+                        </ol>
+                      ),
+                      blockquote: ({ children }) => (
+                        <blockquote className="mt-6 border-l-2 border-accent pl-5 [&_p]:mt-0 [&_p]:font-serif [&_p]:text-xl [&_p]:font-medium [&_p]:leading-relaxed [&_p]:text-ink">
+                          {children}
+                        </blockquote>
+                      ),
+                      strong: ({ children }) => (
+                        <strong className="font-semibold text-ink">
+                          {children}
+                        </strong>
+                      ),
+                      a: ({ href, children }) => (
+                        <a
+                          href={href}
+                          className="font-medium text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:text-accent-dark"
+                        >
+                          {children}
+                        </a>
+                      ),
+                    }}
+                  >
+                    {caseStudy.content}
+                  </ReactMarkdown>
+                </article>
+              ) : (
                 <div className="rounded-md border border-dashed border-border-strong p-6 text-sm text-ink-faint">
-                  The full write-up for this one — role, challenge, approach
-                  and outcome — is coming soon.
+                  The full write-up for this case study is coming soon.
                 </div>
               )}
             </div>
@@ -163,7 +161,25 @@ export default async function CaseStudyPage({
                   <dt className="text-ink-faint">Year</dt>
                   <dd className="mt-0.5 text-ink">{caseStudy.year}</dd>
                 </div>
-                {caseStudy.skills && (
+                {caseStudy.role && (
+                  <div>
+                    <dt className="text-ink-faint">Role</dt>
+                    <dd className="mt-0.5 text-ink">{caseStudy.role}</dd>
+                  </div>
+                )}
+                {caseStudy.duration && (
+                  <div>
+                    <dt className="text-ink-faint">Duration</dt>
+                    <dd className="mt-0.5 text-ink">{caseStudy.duration}</dd>
+                  </div>
+                )}
+                {caseStudy.team && (
+                  <div>
+                    <dt className="text-ink-faint">Team</dt>
+                    <dd className="mt-0.5 text-ink">{caseStudy.team}</dd>
+                  </div>
+                )}
+                {caseStudy.skills.length > 0 && (
                   <div>
                     <dt className="text-ink-faint">Skills</dt>
                     <dd className="mt-0.5 text-ink">
@@ -171,16 +187,21 @@ export default async function CaseStudyPage({
                     </dd>
                   </div>
                 )}
-                <div>
-                  <dt className="text-ink-faint">Tools</dt>
-                  <dd className="mt-0.5 text-ink">
-                    {caseStudy.tools.join(", ")}
-                  </dd>
-                </div>
+                {caseStudy.tools.length > 0 && (
+                  <div>
+                    <dt className="text-ink-faint">Tools</dt>
+                    <dd className="mt-0.5 text-ink">
+                      {caseStudy.tools.join(", ")}
+                    </dd>
+                  </div>
+                )}
               </dl>
               {caseStudy.websiteUrl && (
                 <div className="mt-6">
-                  <Button href={caseStudy.websiteUrl} className="w-full justify-center">
+                  <Button
+                    href={caseStudy.websiteUrl}
+                    className="w-full justify-center"
+                  >
                     Visit website
                   </Button>
                 </div>
@@ -200,8 +221,8 @@ export default async function CaseStudyPage({
               Other case studies
             </h2>
             <div className="mt-10 grid gap-6 md:grid-cols-2">
-              {related.map((cs) => (
-                <CaseStudyCard key={cs.slug} caseStudy={cs} />
+              {related.map((study) => (
+                <CaseStudyCard key={study.slug} caseStudy={study} />
               ))}
             </div>
           </div>
