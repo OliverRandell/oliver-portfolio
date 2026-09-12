@@ -16,33 +16,27 @@ Open http://localhost:3000.
 ```
 /              Hero, two featured case studies, testimonials, CTA
 /case-studies  Every case study, newest first
-/case-studies/[slug]   Dedicated template — renders whatever sections exist
+/case-studies/[slug]   Dedicated template — renders each Markdown case study
 /about         Bio + the scroll-animated experience timeline
 /contact       Mailto-based form for now (see "Wiring up contact" below)
 ```
 
 ## Before you ship it
 
-1. **Case study content** — `lib/case-studies.ts` is the single source of
-   truth for all four case studies. Candella is fully written; the other
-   three (`sesimi-saas-platform-rebuild`, `onboarding-workflow-sesimi`,
-   `upcycle-circular-commerce`) only have summaries. Each has a `// TODO`
-   comment — paste in `role` / `challenge` / `approach` / `outcome` /
-   `reflection` arrays (same shape as Candella's) and the detail page picks
-   them up automatically. Fields left out just don't render — no broken
-   layout either way.
-2. **Featured pair** — each case study has a `featured: boolean`. Exactly
-   two should be `true` at a time; those are what show on Home. Sesimi +
-   Candella are flagged now. Re-flag a different pair any time you're
-   targeting a different kind of role — no code changes beyond that one
-   field.
+1. **Case study content** — each file in `content/case-studies/` contains
+   structured frontmatter and a free-form Markdown body. Add a new `.md` file
+   there and it will automatically appear on the case-study index and have its
+   own detail route. No TypeScript change is needed. Case studies without a
+   Markdown body show a restrained "coming soon" message.
+2. **Featured pair** — each case study has a `featured: boolean` in its
+   frontmatter. Exactly two should be `true` at a time; those are what show on
+   Home. Sesimi + Cancer Council Victoria are flagged now.
 3. **Project images** — there's nowhere to drop case study cover images yet
    (none were available when this was built — only screenshots of your live
    site, which aren't clean source files). Export the originals from your
    Webflow asset manager, drop them in `public/images/case-studies/`, and
-   add a `coverImage` field to the relevant entries in `lib/case-studies.ts`
-   — I can wire the `<Image>` markup into the template fast once the files
-   exist.
+   add a `coverImage` frontmatter field to the relevant Markdown files — the
+   detail template will need a small update before that field is rendered.
 4. **Testimonials** — `components/Testimonials.tsx` has the real Hooman
    Dehkordi quote plus one placeholder slot. Add more the same way.
 5. **LinkedIn URL** — used in `Footer.tsx` and `app/contact/page.tsx`.
