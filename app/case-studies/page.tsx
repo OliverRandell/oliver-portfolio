@@ -8,7 +8,7 @@ import { getAllCaseStudiesSorted } from "@/lib/case-studies";
 export const metadata: Metadata = {
   title: "Case studies",
   description:
-    "A working record of products I've helped build — from enterprise SaaS rebuilds to self-initiated apps shipped solo.",
+    "A working record of products I've helped build from enterprise SaaS rebuilds to self-initiated apps shipped solo.",
 };
 
 export default function CaseStudiesPage() {
@@ -21,7 +21,7 @@ export default function CaseStudiesPage() {
           <SectionHeading
             eyebrow="Case studies"
             title="A working record of products I've helped build."
-            description="Some of this is enterprise SaaS work delivered with large cross-functional teams. Some of it is things I designed and shipped myself, end to end. I think both are worth showing — they test different muscles."
+            description="Some of this is enterprise SaaS work delivered with large cross-functional teams. Some of it is things I designed and shipped myself, end to end."
           />
 
           <div className="mt-14 grid gap-6 sm:mt-16 md:grid-cols-2">
