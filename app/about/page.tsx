@@ -26,7 +26,7 @@ export default function AboutPage() {
               to use the thing.
             </h1>
 
-            <div className="mt-8 max-w-2xl space-y-5 text-[15px] leading-relaxed text-ink-muted sm:text-base">
+            <div className="mt-8 max-w-2xl space-y-5 text-base leading-relaxed text-ink-muted">
               <p>
                 I spent my first career as a motorsport engineer, where every
                 decision gets tested against a lap time — not an opinion.

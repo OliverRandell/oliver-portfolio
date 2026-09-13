@@ -23,7 +23,7 @@ export default function Header() {
       <div className="mx-auto flex h-[4.75rem] max-w-(--container-content) items-center justify-between px-6 sm:px-8 lg:px-12">
         <Link
           href="/"
-          className="font-serif text-3xl font-semibold tracking-[-0.04em] text-ink"
+          className="font-serif text-[40px] font-normal leading-none tracking-[-0.04em] text-ink"
           onClick={() => setOpen(false)}
         >
           or.

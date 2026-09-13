@@ -61,7 +61,7 @@ export default async function CaseStudyPage({
           <h1 className="mt-3 max-w-3xl font-serif text-4xl font-medium leading-tight text-ink sm:text-5xl">
             {caseStudy.title}
           </h1>
-          <p className="mt-6 max-w-3xl text-[15px] leading-relaxed text-ink-muted sm:text-base">
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-ink-muted">
             {caseStudy.summary}
           </p>
 
@@ -104,7 +104,7 @@ export default async function CaseStudyPage({
                         </h3>
                       ),
                       p: ({ children }) => (
-                        <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
+                        <p className="mt-4 text-base leading-relaxed text-ink-muted">
                           {children}
                         </p>
                       ),
@@ -121,12 +121,12 @@ export default async function CaseStudyPage({
                         />
                       ),
                       ul: ({ children }) => (
-                        <ul className="mt-4 list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-ink-muted marker:text-accent">
+                        <ul className="mt-4 list-disc space-y-2 pl-5 text-base leading-relaxed text-ink-muted marker:text-accent">
                           {children}
                         </ul>
                       ),
                       ol: ({ children }) => (
-                        <ol className="mt-4 list-decimal space-y-2 pl-5 text-[15px] leading-relaxed text-ink-muted marker:text-accent">
+                        <ol className="mt-4 list-decimal space-y-2 pl-5 text-base leading-relaxed text-ink-muted marker:text-accent">
                           {children}
                         </ol>
                       ),

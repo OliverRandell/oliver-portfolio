@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const siteLinks = [
   { label: "Home", href: "/" },
-  { label: "Case studies", href: "/case-studies" },
+  { label: "Work", href: "/case-studies" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -20,8 +20,13 @@ export default function Footer() {
       <div className="mx-auto max-w-(--container-content) px-6 py-12 sm:px-8 lg:px-12">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <p className="font-serif text-xl text-paper">Oliver Randell</p>
-            <p className="mt-1 text-sm">
+            <Link
+              href="/"
+              className="font-serif text-[40px] font-normal leading-none tracking-[-0.04em] text-paper"
+            >
+              or.
+            </Link>
+            <p className="mt-2 text-sm">
               Senior Product Manager, based in Melbourne, VIC
             </p>
           </div>

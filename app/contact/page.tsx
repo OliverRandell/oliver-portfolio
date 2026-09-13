@@ -26,7 +26,7 @@ export default function ContactPage() {
           <h1 className="max-w-2xl font-serif text-4xl font-medium leading-tight text-ink sm:text-5xl">
             Let&apos;s talk.
           </h1>
-          <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink-muted sm:text-base">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-muted">
             Currently open to <RotatingPhrase />. Based in Melbourne, happy
             to talk remote or hybrid.
           </p>

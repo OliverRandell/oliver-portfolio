@@ -2,7 +2,7 @@ const links = [
   {
     // Add the final PDF at public/oliver-randell-resume.pdf.
     label: "Download résumé",
-    href: "/oliver-randell-resume.pdf",
+    href: "resume/oliver-randell-resume.pdf",
     download: true,
     icon: (
       <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />

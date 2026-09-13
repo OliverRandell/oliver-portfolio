@@ -40,7 +40,7 @@ metrics:
   - value: "9"
     label: "Build sprints"
   - value: "~40K"
-    label: "Users in a recent 30-day period"
+    label: "Users over the last 30 days"
 ---
 
 Cancer Council Victoria was replacing the digital foundation behind [Quit](https://www.quit.org.au/) while establishing the basis for a national cessation platform: a more accessible and flexible way for Australians to find evidence-based support to stop smoking or vaping.
@@ -73,7 +73,7 @@ The mechanics were simple, but the purpose was product-focused: give design and 
 
 By the final stages of delivery, content migration had become part of the critical path into UAT. That changed how I assessed new requests. A theoretically better solution was not necessarily the better product decision if implementing it stopped the content team moving.
 
-## Decision 01 — Stop waiting for the ideal forms integration
+## Decision 01 - Stop waiting for the ideal forms integration
 
 One of the first major risks appeared around forms.
 
@@ -83,7 +83,7 @@ I made the call to move forward without the custom implementation for Phase 1. I
 
 It was not the architecture we ultimately wanted, but it protected the user journey and removed an external dependency from the critical path. The deeper integration could be revisited later without holding up the rest of the platform.
 
-## Decision 02 — Choose the pragmatic content architecture
+## Decision 02 - Choose the pragmatic content architecture
 
 A second decision arrived much closer to launch.
 
@@ -121,7 +121,7 @@ The platform brought practical services including [My Quit Plan](https://www.qui
 
 The work then moved into structured handover and managed support rather than an extended build phase. The selected article-to-page migration was completed after launch, validating the decision to keep content moving rather than pause for a larger template rebuild.
 
-The platform has continued to be used at national scale. In September 2026, Google Analytics showed approximately **40,000 users over the previous 30 days**, with the Quit Plan, support pathways and health tools among the most-visited experiences.
+The platform has continued to be used at national scale. In September 2026, Google Analytics showed approximately 40,000 users over the previous 30 days, with the Quit Plan, support pathways and health tools among the most-visited experiences.
 
 ## What I learned
 
@@ -131,4 +131,4 @@ Dependencies fail. New information arrives late. The best solution on paper is n
 
 The useful skill is making the consequence of each option clear enough that a team and client can keep moving with confidence.
 
-Sometimes that means adding structure. Sometimes it means making a deliberate compromise. And sometimes good leadership is recognising that **“not yet” is a better decision than allowing perfect to put the outcome at risk.**
+Sometimes that means adding structure. Sometimes it means making a deliberate compromise. And sometimes good leadership is recognising that _not yet_ is a better decision than allowing _perfect_ to put the outcome at risk.

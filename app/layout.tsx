@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Newsreader } from "next/font/google";
+import { Montserrat, Newsreader } from "next/font/google";
 import Header from "@/components/Header";
 import ContactRail from "@/components/ContactRail";
 import "./globals.css";
@@ -11,10 +11,10 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
-const manrope = Manrope({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-manrope",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -56,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${newsreader.variable} ${montserrat.variable}`}>
       <body className="bg-paper font-sans text-ink antialiased">
         <Header />
         <ContactRail />

@@ -12,7 +12,7 @@ export default function FeaturedCaseStudies() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="Selected work"
-            title="Product work with measurable impact."
+            title="Recent project's I've managed."
           />
           <Link
             href="/case-studies"

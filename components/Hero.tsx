@@ -11,10 +11,8 @@ export default function Hero() {
           </p>
 
           <h1 className="max-w-3xl font-serif text-5xl font-medium leading-[0.98] tracking-[-0.035em] text-ink sm:text-6xl lg:text-[4.75rem]">
-            I turn complex problems into{" "}
-            <span className="text-accent">
-              digital products people actually use.
-            </span>
+            I help organisations turn problems worth solving into thoughtful{" "}
+            <span className="text-accent">digital products.</span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
@@ -29,19 +27,10 @@ export default function Hero() {
               More about me
             </Button>
           </div>
-
         </div>
 
         <div className="order-1 md:order-2">
           <div className="relative mx-auto max-w-[25rem] py-8 md:max-w-none md:py-16">
-            <div
-              aria-hidden="true"
-              className="absolute inset-y-0 left-[14%] right-[-35vw] -z-10 rounded-l-[5rem] bg-surface sm:rounded-l-[8rem]"
-            />
-            {/* <div
-              aria-hidden="true"
-              className="absolute -left-1 bottom-[13%] h-28 w-16 -rotate-12 rounded-[2rem] bg-coral sm:h-36 sm:w-20"
-            /> */}
             <div className="relative mx-auto aspect-square w-[88%] overflow-hidden rounded-full border-[10px] border-paper shadow-[0_20px_65px_rgba(13,27,42,0.14)]">
               <Image
                 src="/images/oliver-portrait.jpg"
