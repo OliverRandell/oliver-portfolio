@@ -12,11 +12,11 @@ export default function FeaturedCaseStudies() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="Selected work"
-            title="A couple of things I'm proud of."
+            title="Product work with measurable impact."
           />
           <Link
             href="/case-studies"
-            className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent"
+            className="inline-flex shrink-0 items-center gap-2 text-[10px] font-bold uppercase tracking-[1px] text-accent"
           >
             View all case studies
             <svg

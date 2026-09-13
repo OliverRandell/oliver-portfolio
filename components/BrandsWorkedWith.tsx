@@ -1,11 +1,21 @@
-const directBrands = [
-  "Cancer Council Victoria",
-  "BMW Group Australia",
+const brands = [
   "MyCareSpace",
-  "Sesimi",
+  "City of Melbourne",
+  "Toyota",
+  "Volkswagen",
+  "Cancer Council Victoria",
+  "Loan Market",
+  "BMW",
+  "Catch.com.au",
+  "Kubota",
+  "Scenic",
+  "The Chocolate Box",
+  "Robert Gordon Pottery",
+  "Mitsubishi",
+  "Audi",
+  "Hyundai",
+  "Quest Hotels",
 ];
-
-const platformBrands = ["Toyota", "Volkswagen", "Quest Hotels"];
 
 export default function BrandsWorkedWith() {
   return (
@@ -25,38 +35,17 @@ export default function BrandsWorkedWith() {
           </p>
         </div>
 
-        <div className="space-y-9">
-          <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-faint">
-              Direct project leadership
-            </p>
-            <div className="grid grid-cols-2 border-l border-t border-border sm:grid-cols-4">
-              {directBrands.map((brand) => (
-                <div
-                  key={brand}
-                  className="grid min-h-28 place-items-center border-b border-r border-border bg-paper px-4 text-center text-sm font-semibold text-ink-muted transition-colors hover:text-accent"
-                >
-                  {brand}
-                </div>
-              ))}
+        <div className="grid grid-cols-2 border-l border-t border-border sm:grid-cols-4">
+          {brands.map((brand) => (
+            <div
+              key={brand}
+              className="group grid min-h-24 place-items-center border-b border-r border-border bg-paper px-4 py-5 text-center transition-colors hover:bg-accent-tint"
+            >
+              <span className="max-w-32 text-[13px] font-bold leading-tight tracking-[-0.01em] text-ink-muted transition-colors group-hover:text-accent">
+                {brand}
+              </span>
             </div>
-          </div>
-
-          <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-faint">
-              Enterprise brands supported through Sesimi
-            </p>
-            <div className="grid grid-cols-3 border-l border-t border-border">
-              {platformBrands.map((brand) => (
-                <div
-                  key={brand}
-                  className="grid min-h-24 place-items-center border-b border-r border-border bg-paper px-3 text-center font-serif text-xl font-medium text-ink-muted transition-colors hover:text-accent"
-                >
-                  {brand}
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

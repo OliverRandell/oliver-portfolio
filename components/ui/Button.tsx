@@ -29,7 +29,7 @@ export default function Button({
       href={href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className={`group inline-flex items-center gap-2.5 rounded-sm px-6 py-3 text-sm font-medium tracking-wide transition-colors duration-200 ${variantStyles[variant]} ${className}`}
+      className={`group inline-flex items-center gap-2.5 rounded-sm px-6 py-3 text-[10px] font-bold uppercase tracking-[1px] transition-colors duration-200 ${variantStyles[variant]} ${className}`}
     >
       {children}
       {showArrow && (

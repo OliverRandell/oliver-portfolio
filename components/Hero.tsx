@@ -11,8 +11,10 @@ export default function Hero() {
           </p>
 
           <h1 className="max-w-3xl font-serif text-5xl font-medium leading-[0.98] tracking-[-0.035em] text-ink sm:text-6xl lg:text-[4.75rem]">
-            I help organisations turn {" "}
-            <span className="text-accent">complex problems</span> into  digital products
+            I turn complex problems into{" "}
+            <span className="text-accent">
+              digital products people actually use.
+            </span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
@@ -28,11 +30,6 @@ export default function Hero() {
             </Button>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 border-t border-border pt-5 text-xs font-medium uppercase tracking-[0.08em] text-ink-faint">
-            <span>Product strategy</span>
-            <span>Delivery leadership</span>
-            <span>UX and discovery</span>
-          </div>
         </div>
 
         <div className="order-1 md:order-2">
@@ -41,10 +38,10 @@ export default function Hero() {
               aria-hidden="true"
               className="absolute inset-y-0 left-[14%] right-[-35vw] -z-10 rounded-l-[5rem] bg-surface sm:rounded-l-[8rem]"
             />
-            <div
+            {/* <div
               aria-hidden="true"
-              className="absolute -left-3 top-[16%] h-20 w-20 rounded-full bg-sun sm:h-28 sm:w-28"
-            />
+              className="absolute -left-1 bottom-[13%] h-28 w-16 -rotate-12 rounded-[2rem] bg-coral sm:h-36 sm:w-20"
+            /> */}
             <div className="relative mx-auto aspect-square w-[88%] overflow-hidden rounded-full border-[10px] border-paper shadow-[0_20px_65px_rgba(13,27,42,0.14)]">
               <Image
                 src="/images/oliver-portrait.jpg"
@@ -54,9 +51,6 @@ export default function Hero() {
                 sizes="(min-width: 768px) 32rem, 80vw"
                 className="object-cover object-top"
               />
-            </div>
-            <div className="absolute bottom-[8%] right-[2%] rounded-full bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-paper shadow-lg">
-              Melbourne, Australia
             </div>
           </div>
         </div>

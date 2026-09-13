@@ -84,7 +84,7 @@ export default function CaseStudyCard({
         <p className="mt-5 text-[15px] leading-relaxed text-ink-muted">
           {caseStudy.summary}
         </p>
-        <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-colors group-hover:text-accent">
+        <span className="mt-5 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1px] text-ink transition-colors group-hover:text-accent">
           Read the case study
           <span aria-hidden="true">↗</span>
         </span>
@@ -114,7 +114,7 @@ export default function CaseStudyCard({
         {caseStudy.tools.slice(0, 4).join(" · ")}
       </div>
 
-      <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent">
+      <span className="mt-5 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[1px] text-accent">
         Read the case study
         <svg
           width="13"

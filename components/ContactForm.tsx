@@ -71,7 +71,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="group mt-8 inline-flex items-center gap-2.5 rounded-sm bg-accent px-6 py-3 text-sm font-medium tracking-wide text-paper transition-colors duration-200 hover:bg-accent-dark"
+        className="group mt-8 inline-flex items-center gap-2.5 rounded-sm bg-accent px-6 py-3 text-[10px] font-bold uppercase tracking-[1px] text-paper transition-colors duration-200 hover:bg-accent-dark"
       >
         Send message
         <svg
