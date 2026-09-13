@@ -15,7 +15,11 @@ function CaseStudyVisual({ caseStudy }: { caseStudy: CaseStudy }) {
         alt={caseStudy.coverAlt ?? ""}
         fill
         sizes="(min-width: 768px) 50vw, 100vw"
-        className="object-cover transition-transform duration-500 group-hover:scale-[1.015]"
+        className={
+          caseStudy.coverFit === "contain"
+            ? "object-contain object-center"
+            : "object-cover object-center transition-transform duration-500 group-hover:scale-[1.015]"
+        }
       />
     );
   }

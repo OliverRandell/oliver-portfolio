@@ -108,6 +108,18 @@ export default async function CaseStudyPage({
                           {children}
                         </p>
                       ),
+                      img: ({ src, alt }) => (
+                        // Case-study screenshots may be wide desktop captures or
+                        // tall mobile screens. Constraining height keeps both
+                        // useful without allowing portrait images to dominate.
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={src}
+                          alt={alt ?? ""}
+                          loading="lazy"
+                          className="mx-auto mt-7 max-h-[42rem] w-auto max-w-full rounded-xl border border-border object-contain shadow-sm"
+                        />
+                      ),
                       ul: ({ children }) => (
                         <ul className="mt-4 list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-ink-muted marker:text-accent">
                           {children}
@@ -131,6 +143,8 @@ export default async function CaseStudyPage({
                       a: ({ href, children }) => (
                         <a
                           href={href}
+                          target={href?.startsWith("http") ? "_blank" : undefined}
+                          rel={href?.startsWith("http") ? "noreferrer" : undefined}
                           className="font-medium text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:text-accent-dark"
                         >
                           {children}

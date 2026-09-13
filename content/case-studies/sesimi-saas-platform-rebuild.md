@@ -5,6 +5,10 @@ client: "Sesimi"
 year: "2024"
 date: "2024-02-01"
 featured: true
+websiteUrl: "https://sesimi.com/"
+coverImage: "/images/case-studies/sesimi/sesimi-platform-rebuild-cover.png"
+coverAlt: "An editorial illustration of a fragmented legacy platform being rebuilt into a unified asset and template system"
+coverFit: "contain"
 
 role: "Senior Product Lead"
 
@@ -76,9 +80,13 @@ I also segmented customers by how they used the platform. Asset-library users of
 
 This helped us avoid one large, risky release. Instead, we moved through the rebuild in deliberate phases using six-week Shape Up cycles.
 
-The first phase focused on rebuilding the asset library. We introduced Algolia-powered search and filtering, and reduced the product's dependence on rigid folder structures. This made assets faster to find and gave the platform a more scalable information architecture.
+![The Sesimi platform rebuild progressing through audit, rebuilding the foundations and deliberate client migration](/images/case-studies/sesimi/sesimi-rebuild-phases.png)
 
-The second phase focused on the Template Builder. We moved away from the fragile Adobe-based process and introduced HTML outputs, improving speed, reliability and maintainability.
+*Breaking the work into deliberate phases allowed us to improve the foundations while protecting customer trust.*
+
+The first phase focused on rebuilding the [asset library](https://sesimi.com/products/digital-asset-management/). We introduced Algolia-powered search and filtering, and reduced the product's dependence on rigid folder structures. This made assets faster to find and gave the platform a more scalable information architecture.
+
+The second phase focused on the [Template Builder](https://sesimi.com/products/creative-automation/). We moved away from the fragile Adobe-based process and introduced HTML outputs, improving speed, reliability and maintainability.
 
 Throughout the rebuild, I ran regular sessions with the CEO and leadership team to make the state of the work visible. I presented progress, risks and trade-offs, and made sure decisions were understood before they became delivery problems.
 

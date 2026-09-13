@@ -26,6 +26,7 @@ export type CaseStudy = {
   websiteUrl?: string;
   coverImage?: string;
   coverAlt?: string;
+  coverFit?: "cover" | "contain";
   metrics: CaseStudyMetric[];
   /** Markdown body after the frontmatter. */
   content: string;
@@ -90,6 +91,7 @@ function readCaseStudy(fileName: string): CaseStudy {
     websiteUrl: optionalString(data.websiteUrl),
     coverImage: optionalString(data.coverImage),
     coverAlt: optionalString(data.coverAlt),
+    coverFit: data.coverFit === "contain" ? "contain" : "cover",
     metrics: metricsArray(data.metrics),
     content: content.trim(),
   };

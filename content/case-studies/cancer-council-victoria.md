@@ -8,6 +8,7 @@ featured: true
 websiteUrl: "https://www.quit.org.au/"
 coverImage: "/images/case-studies/ccv/ccv-cover.png"
 coverAlt: "The Quit website shown across desktop and mobile devices"
+coverFit: "contain"
 
 role: "Delivery Lead / Product Lead"
 duration: "July–December 2025"
@@ -108,15 +109,15 @@ The foundational National Cessation Platform launched in December 2025 against t
 
 Phase 1 established a new platform foundation spanning structured content and reusable components, search, analytics, personalisation foundations and interactive cessation tools including the Quit Plan, Cost Calculator and Health Effects experience.
 
-[![The My Quit Plan experience, showing the first step for choosing a quit date](/images/case-studies/ccv/quit-plan.webp)](https://www.quit.org.au/en/tools/quit-plan)
+[![The mobile My Quit Plan experience, helping a user identify their reason to quit](/images/case-studies/ccv/quit-plan-mobile.png)](https://www.quit.org.au/en/tools/quit-plan)
 
-*My Quit Plan turns a difficult personal goal into a clear, guided series of steps.*
+*My Quit Plan turns a difficult personal goal into a clear, guided series of steps across mobile and desktop.*
 
 The platform brought practical services including [My Quit Plan](https://www.quit.org.au/en/tools/quit-plan), the [Cost Calculator](https://www.quit.org.au/en/tools/cost-calculator) and the interactive [Health Effects experience](https://www.quit.org.au/en/tools/health-effects) into a consistent, accessible product ecosystem.
 
-[![The interactive Health Effects experience, showing how smoking affects the brain](/images/case-studies/ccv/health-effects.webp)](https://www.quit.org.au/en/tools/health-effects)
+[![The Cost Calculator showing the financial impact of smoking over time](/images/case-studies/ccv/cost-calculator.png)](https://www.quit.org.au/en/tools/cost-calculator)
 
-*The Health Effects experience makes a complex evidence base easier to explore by product and area of the body.*
+*The Cost Calculator translates personal inputs into an immediate, tangible view of the financial impact of smoking.*
 
 The work then moved into structured handover and managed support rather than an extended build phase. The selected article-to-page migration was completed after launch, validating the decision to keep content moving rather than pause for a larger template rebuild.
 
